@@ -135,6 +135,7 @@ function Operator:InitializeCast()
 		local RegistryData = self.Registry[Object] or Handler
 		local Size = RegistryData.StartingSize
 		local SizeRange = RegistryData.DefaultSize
+		local YRange = RegistryData.YSize
 		local Distance = RegistryData.Distance
 		local Expansion = RegistryData.Expansion
 		local IsDecal = RegistryData.Type == "Decal"
@@ -144,7 +145,7 @@ function Operator:InitializeCast()
 		local Position = RaycastResult.Position
 		local Normal = RaycastResult.Normal
 
-		local VectorSize = Functions.GetVector(SizeRange)
+		local VectorSize, SizeY = Functions.GetVector(SizeRange), Functions.NextNumber(table.unpack(YRange))
 		local GoalSize = Functions.RefineVectors(IsDecal, Vector3.new(VectorSize.X, VectorSize.Y / 4, VectorSize.X))
 
 		local GoalAngles = Functions.GetAngles(IsDecal, IsDecal)
