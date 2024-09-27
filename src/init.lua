@@ -1,6 +1,6 @@
 --[[
   @ Writer: @Smileeiles
-  @ Version: v1.1.2
+  @ Version: v1.1.3
   @ Description:
      A droplet emitter system,
      used to emit droplets from a specified origin point.
