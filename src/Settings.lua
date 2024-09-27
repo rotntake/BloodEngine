@@ -18,7 +18,8 @@ function Settings.new(Data: {})
 		Type = "Default", -- Defines the droplet type. It can be either "Default" (Sphere) or "Decal".
 		Limit = 500, -- Sets the maximum number of droplets that can be created.
 		Filter = {}, -- An array/table of instances that should be ignored during droplet collision.
-
+		
+		YSize = { 0.1, 0.175 }, -- Specifices the range of the thickness/flatness/depth of the pool. Lesser is flatter.
 		DefaultSize = { 0.4, 0.7 }, -- Specifies the default size range of a pool.
 		DefaultTransparency = { 0.3, 0.4 }, -- Specifies the default transparency range of a pool.
 		StartingSize = Vector3.new(0.1, 0.3, 0.1), -- Sets the initial size of the droplets upon landing.
